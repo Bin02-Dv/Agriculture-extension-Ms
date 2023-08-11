@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEMS - Farmer Details </title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        header{
+            background-color: rgb(107, 176, 245);
+        }
+        body{
+            background-color: rgb(198, 220, 243);
+        }
+        .cart{
+            background-color: rgb(107, 176, 245);
+        }
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <section class="header-section">
+        <header>
+            <ul class="brand">
+                <li><a href="/">AEMS</a></li>
+            </ul>
+            <ul class="ul-2">
+                <li>
+                    <a href="/officer-view">Officers</a>
+                </li>
+                <li>
+                    <a href="/farmer-view">Farmers</a>
+                </li>
+                <li>
+                    <a href="/farm-detail-view">Farm Details</a>
+                </li>
+                <li>
+                    <a href="/history">Visit Histories</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+        </header>
+    </section>
+    <!-- header section ends -->
+<style>
+    table{
+        width: 100%;
+    }
+</style>
+    <!-- table section starts -->
+    <div class="table-section">
+        {% for message in messages %}
+        <div class="success">
+            <p>{{message}}</p>
+        </div>
+        {% endfor %}
+        <div class="table">
+            <h2>Farmer Datas</h2>
+            <table>
+                <thead>
+                    <th>Full Name</th>
+                    <th>Phone Number</th>
+                    <th>Contact Address</th>
+                    <th>Part</th>
+                    <th>Farm</th>
+                    <th>Last Visit</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody>
+                    {% for d in data %}
+                    <tr>
+                        <td>{{d.full_name}}</td>
+                        <td>{{d.phone_number}}</td>
+                        <td>{{d.contact_address}}</td>
+                        <td>{{d.extention}}</td>
+                        <td>{{d.farm}}</td>
+                        <td>{{d.date_visit}}</td>
+                        <td>
+                            <a href="/add-visit/{{d.id}}" class="edit">Add Visit</a><br><br>
+                            <a href="/asign-farm/{{d.id}}" class="edit">Asign Farm</a><br><br>
+                            <a href="/request-for-delete2/{{d.id}}" class="del">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- table section ends -->
+</body>
+</html>

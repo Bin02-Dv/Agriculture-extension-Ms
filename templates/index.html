@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEMS</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        header{
+            background-color: rgb(107, 176, 245);
+        }
+        body{
+            background-color: rgb(198, 220, 243);
+        }
+        .cart{
+            background-color: rgb(107, 176, 245);
+        }
+        .cart:hover{
+            position: relative;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <section class="header-section">
+        <header>
+            <ul class="brand">
+                <li><a href="/">AEMS</a></li>
+            </ul>
+            <ul class="ul-2">
+                <li>
+                    <a href="/officer-view">Officers</a>
+                </li>
+                <li>
+                    <a href="/farmer-view">Farmers</a>
+                </li>
+                <li>
+                    <a href="/farm-detail-view">Farm Details</a>
+                </li>
+                <li>
+                    <a href="/history">Visit Histories</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+        </header>
+    </section>
+    <!-- header section ends -->
+
+    <!-- body section starts -->
+    <main class="body-section">
+        <div class="cart-body">
+            <a href="/add-officer-farmer">
+                <div class="cart">
+                    <h3>upload Officers/Farmers</h3>
+                </div>
+            </a>
+            <!-- <a href="/add-officer-farmer">
+                <div class="cart">
+                    <h3>upload Farmers</h3>
+                </div>
+            </a> -->
+            <a href="/add-farm-details">
+                <div class="cart">
+                    <h3>upload Farm Details</h3>
+                </div>
+            </a>
+            <a href="/history">
+                <div class="cart">
+                    <h3>Visit Histories</h3>
+                </div>
+            </a>
+            <a href="/users">
+                <div class="cart">
+                    <h3>Users</h3>
+                </div>
+            </a>
+        </div>
+    </main>
+    <!-- body section ends -->
+
+    <style>
+        .discription{
+            text-align: center;
+            margin-top: 80px;
+            font-size: 20px;
+            text-shadow: 0 .5rem 1rem rgba(0,0,0, .7);
+        }
+    </style>
+
+    <div class="discription">
+        <h2><i>Agricultural Extention Management System</i></h2>
+    </div>
+</body>
+</html>

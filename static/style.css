@@ -1,0 +1,192 @@
+*{
+    font-family: monospace;
+}
+
+header{
+    background-color: rgb(107, 176, 245);
+}
+
+.header-section header{
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    border-radius: 5px;
+}
+ul{
+    list-style: none;
+}
+.ul-2{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.brand{
+    font-style: italic;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+header a{
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+header a:hover{
+    position: relative;
+    top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.body-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cart{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    border-radius: 10px;
+    border: 2px dashed #fff;
+}
+
+/* form section */
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 20vh);
+    font-family: monospace;
+}
+
+.form-container .form-control{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form-container label{
+    font-size: 20px;
+}
+.form-container h2{
+    font-size: 30px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+.btn{
+    text-align: center;
+}
+.btn button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: dodgerblue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn button:hover{
+    position: relative;
+    top: 5px;
+}
+
+.form-container form{
+    padding: 50px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+}
+
+.danger{
+    background-color: bisque;
+    color: red;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.success{
+    background-color: rgb(203, 248, 203);
+    color: green;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* form section ends */
+
+
+/* Table section starts */
+
+.table{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+table{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    width: 80%;
+}
+
+th{
+    background-color: #000;
+    color: #fff;
+}
+
+table, th, td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.del{
+    background-color: red;
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.edit{
+    background-color: dodgerblue;
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* delete section start */
+
+.delete-section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

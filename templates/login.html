@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEMS - Login</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        header{
+            background-color: rgb(107, 176, 245);
+        }
+    </style>
+</head>
+<body>
+<style>
+    .form-container{
+        margin-top: 50px;
+    }
+    .form-control{
+        width: 100%;
+    }
+</style>
+    <!-- form section starts -->
+    <div class="form-container">
+        <h2>Login</h2>
+        {% for message in messages %}
+        <div class="danger">
+            <p>{{message}}</p>
+        </div>
+        {% endfor %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <div class="row">
+                <input type="text" name="username" id="" class="form-control" required>
+            </div>
+            <label for="password">Password</label>
+            <div class="row">
+                <input type="password" name="password" id="" class="form-control" required>
+            </div>
+            <br>
+            <div class="btn">
+                <button>Login</button>
+            </div><br>
+            <a href="/sign-up">Sign Up User</a>
+        </form>
+    </div>
+    <!-- form section ends -->
+</body>
+</html>

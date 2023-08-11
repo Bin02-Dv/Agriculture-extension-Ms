@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEMS - Update Farm Details</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        header{
+            background-color: rgb(107, 176, 245);
+        }
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <section class="header-section">
+        <header>
+            <ul class="brand">
+                <li><a href="/">AEMS</a></li>
+            </ul>
+            <ul class="ul-2">
+                <li>
+                    <a href="/officer-view">Officers</a>
+                </li>
+                <li>
+                    <a href="/farmer-view">Farmers</a>
+                </li>
+                <li>
+                    <a href="/farm-detail-view">Farm Details</a>
+                </li>
+                <li>
+                    <a href="/history">Visit Histories</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+        </header>
+    </section>
+    <!-- header section ends -->
+
+    <!-- form section starts -->
+    <div class="form-container">
+        <h2>Update Farm Details</h2>
+        {% for message in messages %}
+        <div class="danger">
+            <p>{{message}}</p>
+        </div>
+        {% endfor %}
+        <form action="/update-farm/{{data.id}}" method="post">
+            {% csrf_token %}
+            <label for="farm-location">Farm Location</label>
+            <div class="row">
+                <input type="text" name="farm-location" id="" class="form-control" value="{{data.farm_location}}">
+            </div>
+            <label for="farm-size">Farm Size</label>
+            <div class="row">
+                <input type="text" name="farm-size" id="" class="form-control" value="{{ data.farm_size }}">
+            </div>
+            <br>
+            <div class="btn">
+                <button>Save</button>
+            </div>
+        </form>
+    </div>
+    <!-- form section ends -->
+</body>
+</html>

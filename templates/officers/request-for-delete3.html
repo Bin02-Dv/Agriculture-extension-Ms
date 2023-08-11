@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete - Page</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        header{
+            background-color: rgb(107, 176, 245);
+        }
+        body{
+            background-color: rgb(198, 220, 243);
+        }
+        .cart{
+            background-color: rgb(107, 176, 245);
+        }
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <section class="header-section">
+        <header>
+            <ul class="brand">
+                <li><a href="/">AEMS</a></li>
+            </ul>
+            <ul class="ul-2">
+                <li>
+                    <a href="/officer-view">Officers</a>
+                </li>
+                <li>
+                    <a href="/farmer-view">Farmers</a>
+                </li>
+                <li>
+                    <a href="/farm-detail-view">Farm Details</a>
+                </li>
+                <li>
+                    <a href="/history">Visit Histories</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+        </header>
+    </section>
+    <!-- header section ends -->
+
+    <div class="delete-section">
+        <p>Are you sure you want to delete the selected data? <span class="del">{{data.full_name}}</span> </p>
+        <div class="btns">
+            <a href="/delete3/{{data.id}}" class="del">Yes, i'm sure</a>
+            <a href="/Officer-view" class="edit">No take me back!!</a>
+        </div>
+    </div>
+</body>
+</html>
